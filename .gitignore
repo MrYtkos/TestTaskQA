@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.log
+
+# Virtual environment
+venv/
+.venv/
+env/
+ENV/
+
+# Django
+local_settings.py
+media/
+staticfiles/
+
+# IDE
+.idea/
+
+# Testing / type checking
+.pytest_cache/
+.mypy_cache/
+coverage/
+htmlcov/
+
+# Docker / env
+.env

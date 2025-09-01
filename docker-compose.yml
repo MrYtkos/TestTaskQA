@@ -13,6 +13,7 @@ services:
       - "5432:5432"
 
   web:
+    container_name: web_app
     build: .
     volumes:
       - .:/app
@@ -26,6 +27,21 @@ services:
       DATABASE_PASSWORD: testpassword
       DATABASE_HOST: db
       DATABASE_PORT: 5432
+
+#  test:
+#    build: .
+#    command: sh -c "python manage.py migrate && pytest --cov=questions"
+#    volumes:
+#      - .:/app
+#    working_dir: /app
+#    depends_on:
+#      - db
+#    environment:
+#      DATABASE_NAME: testtaskdb
+#      DATABASE_USER: testuser
+#      DATABASE_PASSWORD: testpassword
+#      DATABASE_HOST: db
+#      DATABASE_PORT: 5432
 
 volumes:
   postgres_data:
